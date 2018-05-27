@@ -1,0 +1,151 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+}
+body,a{
+	font-family: "Hiragino Sans GB","Microsoft YaHei",
+	"SimHei","SimSun","sans-serif";
+	color: #323232;
+}
+p,h2,h3{
+	display: inline-block;
+	color: #323232;
+}
+em{
+	font-style: normal;
+}
+/*========头部===========*/
+.head_daohang{
+	width: 100%;
+	min-width: 1160px;
+	height: 30px;
+	background: #323232;
+	position: relative;
+	z-index: 100;
+}
+.head_inner{
+	margin: 0 auto;
+}
+.head_logo{
+	float: left;
+	margin: 6px 5px 0 30px;
+	width: 56px;
+	height: 18px;
+}
+.head_title{
+	position: relative;
+	float: left;
+}
+.head{
+	margin-left: 13px;
+}
+.head li{
+	float: left;
+	height: 30px;
+}
+.head li a{
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	color: #c0c0c0;
+	/*上下-左右*/
+	padding: 0 10px;
+	line-height: 30px;
+	margin-right: 10px;
+}
+.head li a:hover{
+	color: #1AA532;
+}
+.head li a img{
+	padding-left: 3px;
+}
+/*===============*/
+.head_nav_login{
+	float: right;
+}
+.head_glass{
+	background-image: url(../img/tm.png);
+	width: 17px;
+	height: 19px;
+	position: absolute;
+	z-index: 9999;
+	border: 0;
+	right: 15px;
+}
+.head_glass:hover{
+	background-image: url(../img/666.png);
+	background-position: 0 -54px;
+}
+.head_search{
+	float: left;
+	height: 20px;
+	border-right: 1px solid #636363;
+	margin: 5px;
+	position: relative;
+}
+#headSearch{
+	position: absolute;
+	top: -3px;
+	width: 0px;
+	border-radius: 5px;
+	outline: none;
+	height: 22px;
+	font-size: 14px;
+	display: none;
+	right: 10px;
+	padding: 0 15px;
+	border: 0;
+	transition: all 1s;
+}
+.head_login{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+}
+.head_login a{
+	color: #C0C0C0;
+	font-size: 14px;
+	line-height: 30px;
+	margin-right: 5px;
+	font-weight: 700;
+}
+.head_login a:hover{
+	color: #1AA532;
+}
+.head_login a:last-child{
+	margin-right: 30px;
+}
+.head_login>a>i{
+	width: 17px;
+	height: 19px;
+	/*不换行-设置宽高可以生效*/
+	display: inline-block;
+	vertical-align: text-bottom;
+}
+.icon_qq{
+	background-image: url(../img/tm.png);
+	background-position: 0 -19px;
+	margin-left: 25px;
+}
+.icon_qq:hover{
+	background-image: url(../img/666.png);
+	background-position: 0 0;
+}
+.icon_sina{
+	background-image: url(../img/tm.png);
+	background-position: 0 -38px;
+}
+.icon_sina:hover{
+	background-image: url(../img/666.png);
+	background-position: 0 -17px;
+}
+.icon_weixin{
+	background-image: url(../img/tm.png);
+	background-position: 0 -57px;
+}
+.icon_weixin:hover{
+	background-image: url(../img/666.png);
+	background-position: 0 -34px;
+}

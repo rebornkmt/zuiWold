@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 300px;
+				height: 300px;
+				background: red;
+				margin: 100px auto;
+				/*相对定位*/
+				position:relative;
+				/*支持3D效果*/
+				transform-style: preserve-3d;
+				animation: moveRect 2s linear infinite alternate;
+			}
+			@keyframes moveRect{
+				0%{
+					transform:perspective(1200px) rotateX(0deg) rotateY(0deg);
+				}
+				100%{
+					transform:perspective(1200px) rotateX(360deg) rotateY(360deg);
+				}
+			}
+			/*子绝父相*/
+			#box div{
+				width: 300px;
+				height: 300px;
+				/*绝对定位*/
+				position: absolute;
+				background: greenyellow;
+				font-size: 50px;
+				text-align: center;
+				line-height: 300px;
+			}
+			#box div:nth-of-type(1){
+				background-color: red;
+				/*形变：平移-旋转-缩放...*/
+				transform: rotateY(0deg) translateZ(160px);
+			}
+			#box div:nth-of-type(2){
+				background-color:yellow;
+				transform: rotateY(180deg) translateZ(160px);
+			}
+			#box div:nth-of-type(3){
+				background-color: green;
+				transform: rotateY(-90deg) translateZ(160px);
+				
+			}
+			#box div:nth-of-type(4){
+				background-color: cyan;
+				transform: rotateY(90deg) translateZ(160px);
+			}
+			#box div:nth-of-type(5){
+				background-color: gold;
+				transform: rotateX(90deg) translateZ(160px);
+			}
+			#box div:nth-of-type(6){
+				background-color: blue;
+				transform: rotateX(-90deg) translateZ(160px);
+			}
+			input{
+				width: 200px;
+				height: 52px;
+				background: pink;
+				border-radius: 10px;
+				display:block;
+				margin: 50px auto;
+				font-size: 30px;
+				color: plum;
+			}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+		</div>
+		<input type="button" value="开始"/>
+		<script type="text/javascript">
+			var btn=document.querySelector("input");
+			var box=document.querySelector("#box");
+			btn.onclick=function(){
+				if(this.value=='开始'){
+					this.value='暂停';
+					box.style.animationPlayState.altitude
+				}else{
+					this.value='开始';
+				}
+			}
+		</script>
+	</body>
+</html>
